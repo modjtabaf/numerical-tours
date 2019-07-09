@@ -33,7 +33,7 @@ def circshift(x, p):
     y = x.copy()
     y = np.concatenate((y[p[0]::, :], y[:p[0]:, :]), axis=0)
     if x.shape[1] > 0 and len(p) > 1:
-        y = np.concatenate((y[:, p[0]::], y[:, :p[0]:]), axis=1)
+        y = np.concatenate((y[:, p[1]::], y[:, :p[1]:]), axis=1)
     return y
 
 def circshift1d(x, k):
